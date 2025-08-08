@@ -1,5 +1,5 @@
-# LabubuShop
-COTIL (Projeto de DAW I) - Uma loja interativa de Labubus
+# Fundação Caminho Plano
+COTIL (Projeto de DAW I - 2 Semestre) - Andando Reto na Verdade do Senhor
 
 HTML:
 <br>
