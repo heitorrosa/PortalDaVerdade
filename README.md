@@ -1,4 +1,4 @@
-# Fundação Caminho Plano
+# Fundação Plano
 COTIL (Projeto de DAW I - 2 Semestre) - Andando Reto na Verdade do Senhor
 
 HTML:
