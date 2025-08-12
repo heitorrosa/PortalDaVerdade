@@ -1,40 +1,8 @@
-.headerPrincipal {
-
-    ul {
-        * {
-            color: #000;
-        }
-
-
-
-        display: flex;
-        list-style: none;
-
-        width: auto;
-        margin-top: 2.5vh;
-        margin-left: 2.5vh;
-        margin-bottom: 3vh;
-
-        justify-self: center;
-
-        background-color: #fff;
-        border-radius: 33lvh;
-        
-        li {
-            padding: 0.75vh;
-        }
-
-        li:hover {
-            cursor: pointer;
-
-            font-size: 3vh;
-            transition: font-size 250ms;
-        }
-    }
+.cardInicial {
+    justify-items: center;
 
     h1 {
-        position: relative;
-        font-size: 6vh;
-        justify-self: center;
+        font-size: 3.33vh;
+        font-weight: 500;
     }
 }

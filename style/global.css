@@ -3,9 +3,56 @@
     padding: 0;
     font-family: 'Courier New';
 
+    scroll-behavior: smooth;
+
     color: #fff;
 }
 
 head, body {
     background-color: #000;
+}
+
+.headerPrincipal {
+
+    ul {
+        * {
+            color: #000;
+        }
+
+
+
+        display: flex;
+        list-style: none;
+
+        width: auto;
+        margin-top: 2.5vh;
+        margin-left: 2.5vh;
+        margin-bottom: 3vh;
+
+        justify-self: center;
+
+        background-color: #fff;
+        border-radius: 33lvh;
+        
+        li {
+            a {
+                text-decoration: none;
+            }
+
+            padding: 0.75vh;
+        }
+
+        li:hover {
+            cursor: pointer;
+
+            font-size: 3vh;
+            transition: font-size 250ms;
+        }
+    }
+
+    h1 {
+        position: relative;
+        font-size: 6dvh;
+        justify-self: center;
+    }
 }
