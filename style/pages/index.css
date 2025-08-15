@@ -16,8 +16,20 @@
         font-size: 4.25vh;
         font-weight: 500;
 
-        #verdadeTitle:hover {
+        #verdadeSpan:hover {
             text-decoration: underline;
         }
+    }
+
+    #botaoInicial {
+        * {
+            color: #000;
+        }
+
+        background-color: #fff;
+
+        border-radius: 33lvh;
+
+        box-shadow: 3px 5px 0px rgb(155, 150, 150);
     }
 }
