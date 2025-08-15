@@ -4,12 +4,13 @@
     font-family: 'Courier New';
 
     scroll-behavior: smooth;
+    cursor: default;
 
     color: #fff;
 }
 
 head, body {
-    background-color: #000;
+    background-image: linear-gradient(to bottom left, #000, rgb(30, 30, 30));
 }
 
 .headerPrincipal {
@@ -19,40 +20,39 @@ head, body {
             color: #000;
         }
 
-
-
         display: flex;
         list-style: none;
 
-        width: auto;
         margin-top: 2.5vh;
         margin-left: 2.5vh;
         margin-bottom: 3vh;
 
-        justify-self: center;
+        justify-self: left;
 
         background-color: #fff;
         border-radius: 33lvh;
+
+        box-shadow: 3px 5px 0px rgb(155, 150, 150);
         
         li {
             a {
+                font-size: 1.75vh;
                 text-decoration: none;
             }
 
+            a:hover {
+                cursor: pointer;
+
+                font-size: 2.75vh;
+                transition: font-size 250ms;
+            }
+            
             padding: 0.75vh;
-        }
-
-        li:hover {
-            cursor: pointer;
-
-            font-size: 3vh;
-            transition: font-size 250ms;
         }
     }
 
     h1 {
-        position: relative;
-        font-size: 6dvh;
+        font-size: 6.66dvh;
         justify-self: center;
     }
 }

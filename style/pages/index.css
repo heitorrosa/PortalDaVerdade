@@ -1,8 +1,23 @@
 .cardInicial {
+    justify-self: center;
     justify-items: center;
 
+    height: 75%;
+    width: 75%;
+
+    img {
+        position: static;
+
+        max-height: 100%;
+        max-width: 100%;
+    }
+
     h1 {
-        font-size: 3.33vh;
+        font-size: 4.25vh;
         font-weight: 500;
+
+        #verdadeTitle:hover {
+            text-decoration: underline;
+        }
     }
 }
