@@ -1,35 +1,103 @@
-.cardInicial {
-    justify-self: center;
-    justify-items: center;
+.scroll-container {
+    position: relative;
+    height: 500vh;
+}
 
-    height: 75%;
-    width: 75%;
+.cards-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cardInicial {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    height: 90vh;
+    width: 85vw;
+    
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1;
 
     img {
-        position: static;
-
-        max-height: 100%;
-        max-width: 100%;
+        max-height: 70vh;
+        max-width: 90%;
+        object-fit: contain;
+        margin: 0.2rem 0;
     }
 
     h1 {
-        font-size: 4.25vh;
+        font-size: 7vh;
         font-weight: 500;
+        text-align: center;
+        margin-bottom: 0.3rem;
 
         #verdadeSpan:hover {
             text-decoration: underline;
         }
     }
+}
 
-    #botaoInicial {
-        * {
-            color: #000;
-        }
+.cardInicial[data-card="0"] {
+    opacity: 1;
+}
 
-        background-color: #fff;
-
-        border-radius: 33lvh;
-
-        box-shadow: 3px 5px 0px rgb(155, 150, 150);
+@supports (animation-timeline: scroll()) {
+    .cardInicial[data-card="0"] {
+        animation: fadeOut 1s linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0vh 150vh;
     }
+    
+    .cardInicial[data-card="1"] {
+        animation: fadeInOut 1s linear both;
+        animation-timeline: scroll(root);
+        animation-range: 100vh 250vh;
+    }
+    
+    .cardInicial[data-card="2"] {
+        animation: fadeInOut 1s linear both;
+        animation-timeline: scroll(root);
+        animation-range: 200vh 350vh;
+    }
+    
+    .cardInicial[data-card="3"] {
+        animation: fadeIn 1s linear both;
+        animation-timeline: scroll(root);
+        animation-range: 300vh 500vh;
+    }
+    
+    .cardInicial[data-card="3"] #botaoIniciar {
+        animation: buttonShow 1s linear both;
+        animation-timeline: scroll(root);
+        animation-range: 450vh 500vh;
+    }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 1; }
 }

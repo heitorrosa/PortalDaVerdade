@@ -22,6 +22,8 @@ head, body {
         display: flex;
         list-style: none;
 
+        position: fixed;
+
         margin-top: 2.5vh;
         margin-left: 2.5vh;
         margin-bottom: 3vh;
