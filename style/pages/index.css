@@ -23,10 +23,11 @@
     
     height: 90vh;
     width: 85vw;
-    
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    z-index: 1;
+
+    img, h1 {
+        opacity: 0;
+        transition: opacity 0.6s ease;
+    }
 
     img {
         max-height: 70vh;
@@ -40,64 +41,134 @@
         font-weight: 500;
         text-align: center;
         margin-bottom: 0.3rem;
+        position: relative;
 
-        #verdadeSpan:hover {
-            text-decoration: underline;
+
+        u {
+            color: inherit;
+            text-decoration: none;
+            position: relative;
+        }
+
+        u::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #fff;
+            border-radius: 1px;
+            transition: width 0.6s ease;
         }
     }
 }
 
-.cardInicial[data-card="0"] {
+.cardInicial[data-card="0"] h1,
+.cardInicial[data-card="0"] img {
     opacity: 1;
 }
 
+/* Scroll animations */
 @supports (animation-timeline: scroll()) {
-    .cardInicial[data-card="0"] {
-        animation: fadeOut 1s linear both;
+    .cardInicial[data-card="0"] h1,
+    .cardInicial[data-card="0"] img {
+        animation: fadeOut linear both;
         animation-timeline: scroll(root);
         animation-range: 0vh 150vh;
     }
     
-    .cardInicial[data-card="1"] {
-        animation: fadeInOut 1s linear both;
+    .cardInicial[data-card="1"] h1,
+    .cardInicial[data-card="1"] img {
+        animation: fadeInOut linear both;
         animation-timeline: scroll(root);
         animation-range: 100vh 250vh;
     }
     
-    .cardInicial[data-card="2"] {
-        animation: fadeInOut 1s linear both;
+    .cardInicial[data-card="2"] h1,
+    .cardInicial[data-card="2"] img {
+        animation: fadeInOut linear both;
         animation-timeline: scroll(root);
         animation-range: 200vh 350vh;
     }
     
-    .cardInicial[data-card="3"] {
-        animation: fadeIn 1s linear both;
+    .cardInicial[data-card="3"] h1,
+    .cardInicial[data-card="3"] img {
+        animation: fadeIn linear both;
         animation-timeline: scroll(root);
-        animation-range: 300vh 500vh;
+        animation-range: 300vh 400vh;
     }
     
-    .cardInicial[data-card="3"] #botaoIniciar {
-        animation: buttonShow 1s linear both;
+    /* Underline animations */
+    .cardInicial[data-card="1"] h1 u::after {
+        animation: showUnderline linear both;
         animation-timeline: scroll(root);
-        animation-range: 450vh 500vh;
+        animation-range: 120vh 230vh;
+    }
+    
+    .cardInicial[data-card="2"] h1 u::after {
+        animation: showUnderline linear both;
+        animation-timeline: scroll(root);
+        animation-range: 220vh 330vh;
+    }
+    
+    .cardInicial[data-card="3"] h1 u::after {
+        animation: showUnderline linear both;
+        animation-timeline: scroll(root);
+        animation-range: 320vh 420vh;
     }
 }
 
+/* Keyframes */
 @keyframes fadeOut {
-    0% { opacity: 1; }
-    80% { opacity: 1; }
+    0%, 80% { opacity: 1; }
     100% { opacity: 0; }
 }
 
 @keyframes fadeInOut {
-    0% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
-    20% { opacity: 1; }
-    100% { opacity: 1; }
+    30%, 100% { opacity: 1; }
+}
+
+@keyframes showUnderline {
+    0% { width: 0; }
+    20% { width: 100%; }
+    80% { width: 100%; }
+    100% { width: 0; }
+}
+
+/*
+Main
+*/
+
+#titulo {
+    font-size: 6.66dvh;
+    justify-self: center;
+}
+
+#botaoPrincipal {
+    border: 1;
+    border-radius: 15px;
+    padding: 1vh 1vh;
+    background-color: #fff;
+
+    color: #000;
+    font-size: 2.25dvh;
+
+    box-shadow: 3px 5px 0px rgb(116, 111, 111);
+
+    justify-self: center;
+}
+
+#botaoPrincipal:hover {
+    content: 'Venha conhecer a verdade hoje. ->';
+    cursor: pointer;
+
+    font-size: 2.75vh;
+    transition: font-size 250ms;
 }

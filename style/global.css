@@ -14,27 +14,31 @@ head, body {
 }
 
 .headerPrincipal {
+    * {
+        color: #000;
+    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    margin-top: 2.5vh;
+    margin-left: 2.5vh;
+    margin-bottom: 3vh;
+
+    justify-self: left;
+
+    background-color: #fff;
+    border-radius: 33lvh;
+
+    box-shadow: 3px 5px 0px rgb(155, 150, 150);
+        
     ul {
-        * {
-            color: #000;
-        }
 
         display: flex;
         list-style: none;
 
-        position: fixed;
-
-        margin-top: 2.5vh;
-        margin-left: 2.5vh;
-        margin-bottom: 3vh;
-
-        justify-self: left;
-
-        background-color: #fff;
-        border-radius: 33lvh;
-
-        box-shadow: 3px 5px 0px rgb(155, 150, 150);
-        
         li {
             a {
                 font-size: 1.75vh;
@@ -44,7 +48,7 @@ head, body {
             a:hover {
                 cursor: pointer;
 
-                font-size: 2.75vh;
+                font-size: 2.5vh;
                 transition: font-size 250ms;
             }
             

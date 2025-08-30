@@ -5,13 +5,20 @@
 <link rel="stylesheet" href="style/assets.css">
 <link rel="stylesheet" href="style/global.css">
 
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- AOS Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Portal da Verdade</title>
 
 <head>
-    <header class="headerPrincipal" id="headerPrincipal">
+    <header data-aos="fade-right" class="headerPrincipal" id="headerPrincipal">
         <ul>
             <li><a href="/pages/blog.html">blog</a></li>
             <li><a href="/pages/formulario.html">formulario</a></li>
@@ -21,10 +28,10 @@
 </head>
     
 <body>
-    <div class="scroll-container">
+    <div data-aos="zoom-in" class="scroll-container">
         <div class="cards-wrapper">
             <div class="cardInicial" data-card="0">
-                <h1>Você sabe <span id="verdadeSpan">a verdade</span>?</h1>
+                <h1>Você sabe a verdade?</h1>
                 <img src="assets/index/modeloEsferico.png" width="650" alt="Modelo Esférico">
             </div>
 
@@ -47,8 +54,21 @@
 
     <div style="height: 20vh"></div>
 
-    <a href="#headerPrincipal" class="back-to-top">↑</a>
+    <h1 data-aos="fade-up" id="titulo">Portal da Verdade</h1>
+
+    <div style="height: 2vh"></div>
+
+    <p data-aos="fade-up" id="botaoPrincipal">Venha conhecer a verdade hoje.</p>
+
+    <div style="height: 20vh"></div>
+
 </body>
 
+<script>
+    AOS.init({
+      once: true,
+      duration: 1250
+    });
+</script>
 </html>
 
