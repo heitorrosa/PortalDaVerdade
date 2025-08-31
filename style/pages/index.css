@@ -149,6 +149,6 @@ Main
 #titulo {
     user-select: none;
 
-    font-size: 8dvh;
+    font-size: 10dvh;
     justify-self: center;
 }
