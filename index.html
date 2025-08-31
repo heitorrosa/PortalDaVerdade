@@ -11,12 +11,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
 <title>Portal da Verdade</title>
 
 <head>
-    <header data-aos="fade-right" class="headerPrincipal" id="headerPrincipal">
+    <header data-aos="fade-right" class="headerPrincipal">
         <ul>
-            <li><a href="/pages/blog.html">blog</a></li>
+            <li><a href="#blog">blog</a></li>
             <li><a href="/pages/formulario.html">formulario</a></li>
             <li><a href="/pages/termosDeUso.html">termos de uso</a></li>
         </ul>
@@ -52,19 +55,32 @@
 
     <h1 data-aos="fade-up" id="titulo">Portal da Verdade</h1>
 
-    <div style="height: 2vh"></div>
+    <div style="height: 7.5vh"></div>
 
-    <p data-aos="fade-up" id="botaoPrincipal">Descubra a verdade hoje ➜</p>
+    <div data-aos="fade-up" id="botaoPrincipal" onclick="scrollAnchor('blog')">
+        <a>Descubra a verdade hoje</a>
+        <span class="material-symbols-outlined">arrow_downward</span>
+    </div>
 
-    <div style="height: 20vh"></div>
 
+    <a href="#"><span data-aos="fade-up-left" data-aos-easing="linear" class="material-symbols-outlined" id="inicioBotao">arrow_upward</span></a>
+
+    <div style="height: 100vh"></div>
+
+    <div id="blog">
+        <a>blog</a>
+    </div>
 </body>
 
 <script>
-    AOS.init({
-      once: true,
-      duration: 1250
-    });
+    AOS.init({once: false, duration: 1250});
+
+    function scrollAnchor(elementId) {
+        document.getElementById(elementId).scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 </script>
 </html>
 
