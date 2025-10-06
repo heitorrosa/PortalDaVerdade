@@ -12,9 +12,8 @@
 
     * {
         color: #000;
-        font-size: 24px;
+        font-size: 28px;
         vertical-align: middle;
-        font-weight: 600;
     }
 }
 
@@ -31,6 +30,7 @@
 
 #inicioBotao {
     user-select: none;
+    list-style: none;
 
     border: 1;
     border-radius: 50%;
@@ -46,8 +46,8 @@
     width: 33px;
     height: 33px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
 
     color: #000;
     font-size: 24px;
@@ -57,4 +57,15 @@
 #inicioBotao:hover {
     transform: scale(1.15);
     transition: transform 250ms;
+}
+
+/*
+Responsividade
+*/
+@media(max-width: 600px) {
+    #botaoPrincipal {
+        * {
+            font-size: 18.525px;
+        }
+    }
 }
