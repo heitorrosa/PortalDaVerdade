@@ -153,6 +153,20 @@ Main
 }
 
 /*
+Blog
+*/
+#blog {
+    justify-self: center;
+    justify-items: center;
+
+    table tr {
+        th {
+            padding: 0 1.75rem;
+        }
+    }
+}
+
+/*
 Responsividade
 */
 @media(max-width: 600px) {
@@ -168,5 +182,13 @@ Responsividade
 
     #titulo {
         font-size: 4.1625rem;
+    }
+
+    #blog {
+        table tr {
+            th {
+                padding: 0 0.75rem;
+            }
+        }
     }
 }
