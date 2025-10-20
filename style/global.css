@@ -11,7 +11,9 @@
 }
 
 head, body {
-    background-image: linear-gradient(to bottom left, #000, rgb(30, 30, 30));
+    background: linear-gradient(to bottom left, #000, rgb(30, 30, 30));
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .headerPrincipal {
@@ -53,6 +55,18 @@ head, body {
     }
 }
 
+.centralizeHeader {
+        top: auto !important;
+        bottom: 2.5vh !important;
+        left: 50% !important; 
+        right: auto !important;
+        margin: 0 !important;
+        margin-top: 0 !important;
+        transform: translateX(-50%);
+        visibility: visible !important;
+        opacity: 1 !important;
+}
+
 /*
 Responsividade
 */
@@ -74,5 +88,14 @@ Responsividade
                 font-size: 20px;
             }
         }
+    }
+
+    .centralizeHeader {
+        top: auto !important;
+        bottom: 2.5vh !important;
+        left: 50% !important;
+        right: auto !important;
+        margin: 0 !important;
+        transform: translateX(-50%);
     }
 }
