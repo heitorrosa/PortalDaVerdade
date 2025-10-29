@@ -70,7 +70,7 @@
     opacity: 1;
 }
 
-/* Scroll animations e underline (padrao desktop) */
+/* Scroll animations e underline (desktop) */
 @supports (animation-timeline: scroll()) {
     .cardInicial[data-card="0"] h1,
     .cardInicial[data-card="0"] img {
@@ -158,12 +158,6 @@ Blog
 #blog {
     justify-self: center;
     justify-items: center;
-
-    table tr {
-        th {
-            padding: 0 1.75rem;
-        }
-    }
 }
 
 /*
@@ -184,15 +178,7 @@ Responsividade
         font-size: 4.1625rem;
     }
 
-    #blog {
-        table tr {
-            th {
-                padding: 0 0.75rem;
-            }
-        }
-    }
-
-    /* Scroll animations e underline (ajustado para mobile) */
+    /* Scroll animations e underline (mobile) */
     @supports (animation-timeline: scroll()) {
         .cardInicial[data-card="0"] h1,
         .cardInicial[data-card="0"] img {

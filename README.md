@@ -36,7 +36,7 @@ HTML:
 CSS:
 - Formatação textual: ao menos 3 propriedades diferentes
 - Pseudo-classes
-- Uso e formatação de DIV´s (tamanhos, posicionamento, bordas, fundo, margens/padding) ***
+- Uso e formatação de DIV´s (tamanhos, posicionamento, bordas, fundo, margens/padding)
 - background / cor, img ou gradiente – pode ser da div ou da página
 - Sombra (texto ou div)
 - Formatação das listas com CSS

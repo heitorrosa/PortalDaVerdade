@@ -1,0 +1,74 @@
+/*
+Forms
+*/
+.tituloRegistro {
+    justify-self: center;
+    justify-items: center;
+
+    width: 87.5%;
+
+    h1 {
+        font-size: 5.525vh;
+    }
+
+    p {
+        text-align: center;
+        display: block;
+        line-height: 1.2;
+
+        font-size: 2.33vh;
+    }
+
+    #slogan {
+        letter-spacing: 0.29rem;
+        font-size: 1.5vh;
+
+        text-decoration: dotted;
+    }
+
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+
+        max-width: 105%;
+
+        filter: brightness(2) contrast(1.2) grayscale(1) invert(0.3);
+        opacity: 0.0333;
+    }
+
+    padding-bottom: 5rem;
+}
+
+#formulario {
+    * {
+        color: #000;
+    }
+
+    label, a, p, h1 {
+        color: #fff;
+    }
+
+    justify-self: center;
+
+    width: 50%;
+
+    border: 1px solid white;
+    border-radius: 9.99px;
+
+    padding: 1rem 3rem;
+}
+
+#formulario:hover {
+    transform: scale(1.025);
+}
+
+/*
+Responsividade
+*/
+@media(max-width: 600px) {
+
+}
