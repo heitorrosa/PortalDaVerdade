@@ -15,17 +15,17 @@
         font-size: 28px;
         vertical-align: middle;
     }
-}
 
-#botaoPrincipal:hover {
-    cursor: pointer;
-    
-    * {
+    &:hover {
         cursor: pointer;
-    }
+        
+        * {
+            cursor: pointer;
+        }
 
-    transform: scale(1.075);
-    transition: transform 250ms;
+        transform: scale(1.075);
+        transition: transform 250ms;
+    }
 }
 
 #inicioBotao {
@@ -52,11 +52,11 @@
     color: #000;
     font-size: 24px;
     font-weight: 600;
-}
 
-#inicioBotao:hover {
-    transform: scale(1.15);
-    transition: transform 250ms;
+    &:hover {
+        transform: scale(1.15);
+        transition: transform 250ms;
+    }
 }
 
 /*

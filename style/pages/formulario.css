@@ -34,7 +34,7 @@ Forms
         transform: translateX(-50%);
         z-index: -1;
 
-        max-width: 105%;
+        max-width: 33%;
 
         filter: brightness(2) contrast(1.2) grayscale(1) invert(0.3);
         opacity: 0.0333;
@@ -56,19 +56,67 @@ Forms
 
     width: 50%;
 
-    border: 1px solid white;
+    border: 1px solid #fff;
     border-radius: 9.99px;
 
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
+
+    &:hover {
+        transform: scale(1.0125);
+    }
 }
 
-#formulario:hover {
-    transform: scale(1.025);
+.profilePicContainer {
+    justify-self: center;
+    justify-items: center;
+    margin-bottom: 2rem;
+
+    label {
+        margin-bottom: 1rem;
+    }
+}
+
+.profileCircle {
+    cursor: pointer;
+    overflow: hidden;
+
+    margin-top: 0.75rem;
+
+    width: 6.66rem;
+    height: 6.66rem;
+
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: all 250ms;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+    }
+
+    .uploadIcon {
+        font-size: 48px;
+        color: #fff;
+        transition: all 250ms;
+    }
+
+    &:hover {
+        transform: scale(1.1); 
+    }
 }
 
 /*
 Responsividade
 */
 @media(max-width: 600px) {
-
+    
 }

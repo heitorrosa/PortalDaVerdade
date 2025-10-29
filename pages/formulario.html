@@ -29,7 +29,7 @@
 
     <header class="headerPrincipal responsivePositionRightBottomCenter" data-aos="fade-down" data-aos-anchor-placement="top-bottom">
         <ul>
-            <li><a href="../index.html" class="material-symbols-outlined" style="--font-size: 28px;">home</a></li>
+            <li><span href="../index.html" class="material-symbols-outlined" style="--font-size: 28px;">home</span></li>
         </ul>
     </header>
 </head>
@@ -38,7 +38,7 @@
     <div style="padding-top: 9rem"></div>
 
     <div class="tituloRegistro" data-aos="zoom-in" data-aos-anchor-placement="top-bottom">
-        <img src="../assets/formulario/black sun.svg">
+        <img src="../assets/websiteLogo.png">
 
         <h1>registre-se</h1>
 
@@ -50,15 +50,75 @@
 
     <div method="GET" id="formulario" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <form>
-            <label>username:</label><br>
-            <input type="text">
+            <div class="profilePicContainer">
+                <label>foto de perfil</label><br>
+                
+                <div class="profileCircle" id="profileCircle">
+                    <img id="previewImage" src="" alt="preview">
+                    <span class="material-symbols-outlined uploadIcon">upload</span>
+                </div>
+                
+                <input type="file" id="profileImage" accept="image/*" required style="display: none;">
+            </div>
 
+            <label>username:</label><br>
+            <input type="text" required>
+
+            <div style="padding-top: 1.25rem"></div>
+
+            <label>data de nascimento:</label><br>
+            <input type="date" required>
+
+            <div style="padding-top: 1.25rem"></div>
+
+            <label>localizacao:</label><br>
+            <iframe id="mapFrame" src="https://www.google.com/maps/embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <input type="hidden" id="locationData" name="location">
+
+            <div style="padding-top: 0.5rem"></div>
+
+            <label>senha:</label><br>
+            <input type="password" required>
+
+            <div style="padding-top: 0.5rem"></div>
+
+            <label>confirmar_senha:</label><br>
+            <input type="password" required>
+
+            <div style="padding-top: 3.33rem"></div>
+
+            <input type="checkbox" required>
+            <label>termos de uso</label><br>
         </form>
     </div>
+
+    <div style="padding-top: 100000rem"></div>
 </body>
 
 <script>
     AOS.init({once: false, duration: 1250});
+
+    // Image preview
+    const profileCircle = document.getElementById('profileCircle');
+    const profileImage = document.getElementById('profileImage');
+    const previewImage = document.getElementById('previewImage');
+
+    profileCircle.addEventListener('click', function() {
+        profileImage.click();
+    });
+
+    profileImage.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+                previewImage.style.display = 'block';
+                document.querySelector('.profileCircle .uploadIcon').style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
 
     function scrollAnchor(elementId) {
         document.getElementById(elementId).scrollIntoView({ 
