@@ -8,7 +8,7 @@ Forms
     width: 87.5%;
 
     h1 {
-        font-size: 5.525vh;
+        font-size: 5.125vh;
     }
 
     p {
@@ -64,6 +64,11 @@ Forms
     &:hover {
         transform: scale(1.0125);
     }
+
+    iframe {
+        width: 50%;
+        height: 16rem;  
+    }
 }
 
 .profilePicContainer {
@@ -118,5 +123,12 @@ Forms
 Responsividade
 */
 @media(max-width: 600px) {
-    
+    * {
+        justify-items: center;
+        justify-content: center;
+    }
+
+    #formulario iframe {
+        width: 100%;
+    }
 }
