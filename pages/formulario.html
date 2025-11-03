@@ -48,61 +48,101 @@
         <p id="slogan" data-aos="fade-right" data-aos-easing="ease-in-sine">Andando reto no caminho da verdade.</p>
     </div>
 
-    <div method="GET" id="formulario" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        <form>
-            <div class="profilePicContainer">
-                <label>foto de perfil</label><br>
+    <form method="GET" id="formulario" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <div class="profilePicContainer">
+            <label>foto de perfil</label>
                 
-                <div class="profileCircle" id="profileCircle">
-                    <img id="previewImage" src="" alt="preview">
-                    <span class="material-symbols-outlined uploadIcon">upload</span>
-                </div>
-                
-                <input type="file" id="profileImage" accept="image/*" required style="display: none;">
+            <div class="profileCircle" id="profileCircle">
+                <img id="previewImage" src="" alt="preview">
+                <span class="material-symbols-outlined uploadIcon">upload</span>
             </div>
+                
+            <input type="file" id="profileImage" accept="image/*" required style="display: none;">
+        </div>
 
-            <label>username:</label><br>
-            <input type="text" required>
+        <label>username</label>
+        <input type="text" required>
 
-            <div style="padding-top: 1.25rem"></div>
+        <div style="padding-top: 1.25rem"></div>
 
-            <label>data de nascimento:</label><br>
-            <input type="date" required>
+        <label>email</label>
+        <input type="email" required>
 
-            <div style="padding-top: 1.25rem"></div>
+        <div style="padding-top: 1.25rem"></div>
 
-            <label>localizacao:</label><br>
-            <iframe id="mapFrame" src="https://www.google.com/maps/embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <input type="hidden" id="locationData" name="location">
+        <label>cpf</label>
+        <input type="email" required>
 
-            <div style="padding-top: 0.5rem"></div>
+        <div style="padding-top: 1.25rem"></div>
 
-            <label>como voce conheceu o portal?</label><br>
-            <select required>
-                <option value="">Selecione...</option>
-                <option>panfletos</option>
-                <option>internet</option>    
-                <option>convidado</option>
-                <option>abin/cia</option>
-                <option>outro</option>
-            </select>
+        <label>data de nascimento</label>
+        <input type="date" required>
 
-            <div style="padding-top: 1.25rem"></div>
+        <div style="padding-top: 1.25rem"></div>
 
-            <label>senha:</label><br>
-            <input type="password" required>
+        <label>localizacao</label>
+        <iframe id="mapFrame" src="https://www.google.com/maps/embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <input type="hidden" id="locationData" name="location">
 
-            <div style="padding-top: 0.5rem"></div>
+        <div style="padding-top: 1.25rem"></div>
 
-            <label>confirmar_senha:</label><br>
-            <input type="password" required>
+        <label>como voce conheceu o portal?</label>
+        <select required>
+            <option value="">Selecione...</option>
+            <option>panfletos</option>
+            <option>internet</option>    
+            <option>convidado</option>
+            <option>abin/cia</option>
+            <option>outro</option>
+        </select>
 
-            <div style="padding-top: 3.33rem"></div>
+        <div style="padding-top: 1.25rem"></div>
 
+        <label>informações do cartão</label>
+        <div class="creditcardContainer">
+            <img src="../assets/formulario/cartaoDeCredito.png">
+
+            <div class="containerInputs">
+                <label>número do cartão</label>
+                <input type="text" placeholder="1234 5678 9012 3456" required>
+
+                <label>titular</label>
+                <input type="text" placeholder="Nome Completo" required>
+
+                <label>validade</label>
+                <input type="text" placeholder="MM/YY" required>
+
+                <label>CVV</label>
+                <input type="text" placeholder="123" required>
+            </div>
+        </div>
+
+        <div style="padding-top: 1.25rem"></div>
+
+        <label>senha</label>
+        <div class="passwordContainer">
+            <input type="password" id="passwordInput" required>
+            <button type="button" class="togglePassword" id="togglePassword">
+                <span class="material-symbols-outlined">visibility</span>
+            </button>
+        </div>
+
+        <div style="padding-top: 0.5rem"></div>
+
+        <label>confirmar_senha</label>
+        <input type="password" required>
+
+        <div style="padding-top: 3.33rem"></div>
+
+        <div class="checkboxContainer">
             <input type="checkbox" required>
-            <label>termos de uso</label><br>
-        </form>
-    </div>
+            <label>termos de uso</label>
+        </div>
+
+        <div style="padding-top: 0.5rem"></div>
+
+        <input type="submit" value="Enviar">
+    </form>
 
     <div style="padding-top: 100000rem"></div>
 </body>
@@ -129,6 +169,20 @@
                 document.querySelector('.profileCircle .uploadIcon').style.display = 'none';
             };
             reader.readAsDataURL(file);
+        }
+    });
+
+    // Password Visibility
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('passwordInput');
+
+    togglePassword.addEventListener('click', function() {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            togglePassword.innerHTML = '<span class="material-symbols-outlined">visibility_off</span>';
+        } else {
+            passwordInput.type = 'password';
+            togglePassword.innerHTML = '<span class="material-symbols-outlined">visibility</span>';
         }
     });
 

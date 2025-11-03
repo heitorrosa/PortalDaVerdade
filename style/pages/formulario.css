@@ -44,78 +44,193 @@ Forms
 }
 
 #formulario {
-    * {
-        color: #000;
-    }
-
-    label, a, p, h1 {
-        color: #fff;
-    }
-
-    justify-self: center;
-
-    width: 50%;
-
-    border: 1px solid #fff;
-    border-radius: 9.99px;
-
-    padding: 2rem 3rem;
-
     &:hover {
         transform: scale(1.0125);
     }
 
-    iframe {
-        width: 50%;
-        height: 16rem;  
+    * {
+        justify-items: center;
+        justify-content: center;
     }
-}
-
-.profilePicContainer {
-    justify-self: center;
-    justify-items: center;
-    margin-bottom: 2rem;
-
-    label {
-        margin-bottom: 1rem;
-    }
-}
-
-.profileCircle {
-    cursor: pointer;
-    overflow: hidden;
-
-    margin-top: 0.75rem;
-
-    width: 6.66rem;
-    height: 6.66rem;
-
-    border-radius: 50%;
-    border: 1px solid #fff;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-self: center;
 
-    background-color: rgba(255, 255, 255, 0.1);
-    position: relative;
-    transition: all 250ms;
+    width: 47.5%;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: none;
+    border: 1px solid #fff;
+    border-radius: 9.99px;
+
+    padding: 2rem;
+
+    iframe {
+        width: 50%;
+        height: 16rem;
+
+        border: 1px solid #fff;
+        border-radius: 16px;
     }
 
-    .uploadIcon {
-        font-size: 48px;
+    input,
+    select {
+        cursor: pointer;
+
+        width: 75%;
+        height: 2.3325rem;
+
+        border-radius: 10px;
+        box-sizing: border-box;
+
+        text-align: center;
+
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.05);
+
+        option {
+            background-color: rgb(19, 18, 18);
+        }
+    }
+
+    input[type="date"] {
+        width: 47.5%;
+        
+        &::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+    }
+
+    /*
+    Custom Elements
+    */
+    .creditcardContainer {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        
+        position: relative;
+
+        img {
+            width: 50%;
+            height: auto;
+            object-fit: contain;
+            flex-shrink: 0;
+
+            z-index: 0;
+        }
+    }
+
+    .containerInputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 120%;
+        gap: 0.5rem;
+        margin-left: -2rem;
+
+        z-index: 1000;
+
+        label {
+            width: 100%;
+            color: #fff;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .checkboxContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input {
+            height: auto;
+            width: auto;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .passwordContainer {
+        position: relative;
+        width: 75%;
+        display: flex;
+        align-items: center;
+
+        input {
+            width: 100%;
+            padding-right: 2.5rem;
+        }
+    }
+
+    .togglePassword {
+        position: absolute;
+        right: 0.75rem;
+        background: none;
+        border: none;
         color: #fff;
-        transition: all 250ms;
+        cursor: pointer;
+        font-size: 1.25rem;
+        padding-top: 0.5rem;
+
+        &:hover {
+            transform: scale(1.1);
+            transform: all 250ms;
+        }
     }
 
-    &:hover {
-        transform: scale(1.1); 
+    .profilePicContainer {
+        justify-self: center;
+        justify-items: center;
+        margin-bottom: 2rem;
+
+        label {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .profileCircle {
+        cursor: pointer;
+        overflow: hidden;
+
+        margin-top: 0.75rem;
+
+        width: 6.66rem;
+        height: 6.66rem;
+
+        border-radius: 50%;
+        border: 1px solid #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: rgba(255, 255, 255, 0.05);
+        position: relative;
+        transition: all 250ms;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .uploadIcon {
+            font-size: 48px;
+            color: #fff;
+            transition: all 250ms;
+        }
+
+        &:hover {
+            transform: scale(1.1); 
+        }
     }
 }
 
@@ -123,12 +238,35 @@ Forms
 Responsividade
 */
 @media(max-width: 600px) {
-    * {
-        justify-items: center;
-        justify-content: center;
-    }
+    #formulario {
+        width: 75%;
 
-    #formulario iframe {
-        width: 100%;
+        iframe,
+        input,
+        select,
+        .passwordContainer {
+            width: 100%;
+        }
+
+        .creditcardContainer {
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+
+                opacity: 0.3;
+            }
+        }
+
+        .containerInputs {
+            width: 100%;
+            margin-left: 0;
+            position: relative;
+            padding: 1.5rem;
+
+            label {
+                text-align: center;
+            }
+        }
     }
 }
