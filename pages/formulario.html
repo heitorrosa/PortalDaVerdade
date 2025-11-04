@@ -71,7 +71,7 @@
         <div style="padding-top: 1.25rem"></div>
 
         <label>cpf</label>
-        <input type="email" required>
+        <input type="text" required>
 
         <div style="padding-top: 1.25rem"></div>
 
@@ -110,7 +110,11 @@
                 <input type="text" placeholder="Nome Completo" required>
 
                 <label>validade</label>
-                <input type="text" placeholder="MM/YY" required>
+                <div class="validadeContainer">
+                    <input type="number" min="1" max="12" placeholder="MM" required>
+                    <span>/</span>
+                    <input type="number" min="0" max="99" placeholder="YY" required>
+                </div>
 
                 <label>CVV</label>
                 <input type="text" placeholder="123" required>
@@ -136,7 +140,7 @@
 
         <div class="checkboxContainer">
             <input type="checkbox" required>
-            <label>termos de uso</label>
+            <label>ao registrar sua conta, você estará concordando com nossos termos de uso.</label>
         </div>
 
         <div style="padding-top: 0.5rem"></div>

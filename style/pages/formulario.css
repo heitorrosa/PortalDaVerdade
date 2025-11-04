@@ -91,6 +91,11 @@ Forms
         option {
             background-color: rgb(19, 18, 18);
         }
+
+        &:focus {
+            transform: scale(1.025);
+            transition: all 250ms;
+        }
     }
 
     input[type="date"] {
@@ -145,17 +150,38 @@ Forms
         }
     }
 
-    .checkboxContainer {
+    .validadeContainer {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
 
+        input {
+            width: 40%;
+            height: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+        }
+
+        span {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    }
+
+    /**/
+
+    .checkboxContainer {
         input {
             height: auto;
             width: auto;
-            margin-right: 0.5rem;
         }
     }
+
+    /**/
 
     .passwordContainer {
         position: relative;
@@ -184,6 +210,8 @@ Forms
             transform: all 250ms;
         }
     }
+
+    /**/
 
     .profilePicContainer {
         justify-self: center;
