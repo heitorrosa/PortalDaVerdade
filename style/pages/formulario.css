@@ -48,11 +48,6 @@ Forms
         transform: scale(1.0125);
     }
 
-    * {
-        justify-items: center;
-        justify-content: center;
-    }
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,39 +68,90 @@ Forms
         border-radius: 16px;
     }
 
-    input,
-    select {
+    input, select {
         cursor: pointer;
 
         width: 75%;
         height: 2.3325rem;
 
+        border: 1px solid #fff;
         border-radius: 10px;
         box-sizing: border-box;
 
-        text-align: center;
-
-        border: 1px solid #fff;
         background-color: rgba(255, 255, 255, 0.05);
+
+        text-align: left;
+        padding-left: 1rem;
 
         option {
             background-color: rgb(19, 18, 18);
         }
 
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.25);
+        }
+
         &:focus {
             transform: scale(1.025);
+            background-color: rgba(255, 255, 255, 0.1);
+
             transition: all 250ms;
         }
     }
 
     input[type="date"] {
         width: 47.5%;
+        text-align: center;
         
         &::-webkit-calendar-picker-indicator {
-            filter: invert(1);
+            filter: invert(1)
         }
     }
 
+    select {
+        text-align: center !important;
+        text-align-last: center;
+
+        option {
+            text-align: center;
+        }
+    }
+    input[type="submit"] {
+        text-align: center;
+        width: 33%;
+
+        background-color: rgba(255, 255, 255, 0.1);
+    
+        &:hover {
+            transform: scale(1.025);
+            background-color: rgba(255, 255, 255, 0.25);
+
+            transition: all 250ms;
+        }
+    }
+
+    textarea {
+        * {
+            color: #fff;
+        }
+
+        border: 1px solid #fff;
+        border-radius: 10px;
+        box-sizing: border-box;
+
+        background-color: rgba(255, 255, 255, 0.05);
+
+        margin-top: 0.5rem;
+
+        padding: 0.5rem 1rem;
+
+        width: 75%;
+        min-height: 17.5rem;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.25);       
+        }
+    }
     /*
     Custom Elements
     */
@@ -175,9 +221,29 @@ Forms
     /**/
 
     .checkboxContainer {
-        input {
-            height: auto;
-            width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.75rem;
+
+        input[type="checkbox"] {
+            width: 1.25rem;
+            height: 1.25rem;
+            cursor: pointer;
+            accent-color: rgba(255, 255, 255, 0.0);
+            
+            border: 2px solid #fff;
+            border-radius: 4px;
+
+
+            &:checked {
+                background-color: rgba(255, 255, 255, 0.25);
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all 250ms;
+            }
         }
     }
 
@@ -272,10 +338,15 @@ Responsividade
         iframe,
         input,
         select,
+        textarea,
         .passwordContainer {
             width: 100%;
         }
 
+        label {
+            text-align: center;
+            display: block;
+        }
         .creditcardContainer {
             img {
                 position: absolute;

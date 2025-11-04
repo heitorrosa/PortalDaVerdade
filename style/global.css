@@ -6,6 +6,8 @@
 
     scrollbar-width: none;
     scroll-behavior: smooth;
+    
+    user-select: none;
     cursor: default;
 
     color: #fff;
@@ -23,7 +25,7 @@ head, body {
     }
 
     position: fixed;
-    z-index: 1000;
+    z-index: 10000;
 
     margin-top: 2.5vh;
     margin-left: 2.5vh;
@@ -35,7 +37,7 @@ head, body {
     box-shadow: 3px 5px 0px rgb(155, 150, 150);
             
     ul {
-         display: flex;
+        display: flex;
         list-style: none;
 
         li {

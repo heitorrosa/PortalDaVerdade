@@ -61,17 +61,17 @@
         </div>
 
         <label>username</label>
-        <input type="text" required>
+        <input type="text" placeholder="celso33" maxlength="67" required>
 
         <div style="padding-top: 1.25rem"></div>
 
         <label>email</label>
-        <input type="email" required>
+        <input type="email" placeholder="celso33@gmail.com" maxlength="67" required>
 
         <div style="padding-top: 1.25rem"></div>
 
         <label>cpf</label>
-        <input type="text" required>
+        <input type="number" placeholder="123456789-00" max="999999999999" required>
 
         <div style="padding-top: 1.25rem"></div>
 
@@ -104,10 +104,10 @@
 
             <div class="containerInputs">
                 <label>número do cartão</label>
-                <input type="text" placeholder="1234 5678 9012 3456" required>
+                <input type="text" placeholder="1234 5678 9012 3456" max="9999999999999999" required>
 
                 <label>titular</label>
-                <input type="text" placeholder="Nome Completo" required>
+                <input type="text" placeholder="Celso 33 da Silva" maxlength="67" required>
 
                 <label>validade</label>
                 <div class="validadeContainer">
@@ -117,15 +117,20 @@
                 </div>
 
                 <label>CVV</label>
-                <input type="text" placeholder="123" required>
+                <input type="text" placeholder="123456" maxlength="999999" required>
             </div>
         </div>
 
         <div style="padding-top: 1.25rem"></div>
 
+        <label>porque deveriamos te admtir nessa comunidade? (min 1000 caracteres)</label>
+        <textarea placeholder="Acredito que devo ser admitido nessa comunidade porque..."></textarea>
+
+        <div style="padding-top: 1.25rem"></div>
+
         <label>senha</label>
         <div class="passwordContainer">
-            <input type="password" id="passwordInput" required>
+            <input type="password" id="passwordInput" maxlength="67" required>
             <button type="button" class="togglePassword" id="togglePassword">
                 <span class="material-symbols-outlined">visibility</span>
             </button>
@@ -134,7 +139,7 @@
         <div style="padding-top: 0.5rem"></div>
 
         <label>confirmar_senha</label>
-        <input type="password" required>
+        <input type="password" maxlength="67" required>
 
         <div style="padding-top: 3.33rem"></div>
 
@@ -143,12 +148,12 @@
             <label>ao registrar sua conta, você estará concordando com nossos termos de uso.</label>
         </div>
 
-        <div style="padding-top: 0.5rem"></div>
+        <div style="padding-top: 2rem"></div>
 
-        <input type="submit" value="Enviar">
+        <input type="submit" value="registrar-se">
     </form>
 
-    <div style="padding-top: 100000rem"></div>
+    <div style="padding-top: 2rem"></div>
 </body>
 
 <script>
