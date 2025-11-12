@@ -45,27 +45,35 @@
     text-align: center;
 
     img {
-        border-radius: 25px;
+        border-radius: 8px;
 
         object-fit: cover;
         width: 50%;
+
+        margin-top: 1rem;
     }
 }
 
-.pdf-container iframe {
-    width: 50%;
-    height: 100vh;
+.pdf-container {
+    margin: 1rem auto;
+    width: 100%;
 
-    border: 1px solid #fff;
-    border-radius: 9.99px;
+    object {
+        width: 90%;
+        max-width: 900px;
+        height: 800px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+    }
 }
 
 @media(max-width: 600px) {
     .termosDeUso img {
-        width: 85%;
+        width: 95%;
     }
 
-    .pdf-container iframe {
-        width: 85%;
+    .pdf-container object {
+        width: 95%;
+        height: 600px;
     }
 }
