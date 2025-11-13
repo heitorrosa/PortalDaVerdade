@@ -33,6 +33,32 @@
     }
 }
 
+audio {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    
+    background: rgba(255, 255, 255, 0.133);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    
+    accent-color: rgba(255, 255, 255, 0.25);
+    color-scheme: dark;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 0;
+    
+    accent-color: rgba(255, 255, 255, 0.25);
+    color-scheme: dark;
+}
+
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -136,17 +162,4 @@
     .article-section p {
         text-align: center;
     }
-}
-
-audio {
-    width: 100%;
-    max-width: 500px;
-    display: block;
-    
-    background: rgba(255, 255, 255, 0.133);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 8px;
-    
-    accent-color: rgba(255, 255, 255, 0.25);
-    color-scheme: dark;
 }
