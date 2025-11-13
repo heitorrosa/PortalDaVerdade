@@ -1,5 +1,5 @@
 # Portal da Verdade
-COTIL (Projeto de DAW I - 2 Semestre) - Andando Reto na Verdade do Senhor
+COTIL (Projeto de DAW I - 2 Semestre) - Andando Reto na verdade do Senhor
 
 HTML:
 <br>
